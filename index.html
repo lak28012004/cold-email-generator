@@ -1,47 +1,109 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Cold Mail Generator</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+    <title>Cold Mail Generator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #333;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+            color: #007BFF;
+            margin-bottom: 25px;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        input, textarea, select {
+            width: calc(100% - 22px);
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
+        input:focus, textarea:focus, select:focus {
+            border-color: #007BFF;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+            margin-top: 20px;
+        }
+        button:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+        }
+        pre {
+            background: #eef;
+            padding: 20px;
+            white-space: pre-wrap;
+            border-radius: 10px;
+            text-align: left;
+            margin-top: 30px;
+            border: 1px solid #ccd;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+        }
+        h3 {
+            color: #007BFF;
+            margin-top: 30px;
+            font-size: 1.5em;
+        }
+    </style>
 </head>
+
 <body>
-
-<div class="toggle">
-  <label>
-    <input type="checkbox" id="darkToggle">
-    🌙 Dark Mode
-  </label>
-</div>
-
 <div class="container">
-  <h1>📧 Cold Mail Generator</h1>
+    <h2>📧 Cold Mail Generator</h2>
 
-  <input id="name" placeholder="Your Name">
-  <input id="company" placeholder="Company Name">
-  <input id="role" placeholder="Job Role">
-  <textarea id="skills" placeholder="Your Skills"></textarea>
+    <form method="POST">
+        <input type="text" name="sender" placeholder="Your Name" required>
+        <input type="text" name="receiver" placeholder="Receiver (HR / Manager)" required>
+        <select name="role_type" required>
+            <option value="" disabled selected>Select Role Type</option>
+            <option value="fresher">Fresher</option>
+            <option value="experienced">Experienced</option>
+            <option value="college_student">College Student</option>
+        </select>
+        <input type="text" name="role" placeholder="Your Role" required>
+        <input type="text" name="skills" placeholder="Your Skills" required>
+        <input type="text" name="company" placeholder="Company Name" required>
 
-  <select id="template">
-    <option value="student">Student</option>
-    <option value="fresher">Fresher</option>
-    <option value="experienced">Experienced</option>
-    <option value="networking">Networking</option>
-  </select>
-
-  <button onclick="generateEmail()">🚀 Generate Email</button>
-
-  <div class="actions">
-    <button onclick="copyEmail()">📋 Copy</button>
-    <button onclick="downloadPDF()">📄 Download</button>
-  </div>
-
-  <pre id="output"></pre>
-
-  <div class="mail-icon">✉️</div>
+        <button type="submit">Generate Email</button>
+    </form>
+        <h3>Generated Email</h3>
+        <pre>{{ email }}</pre>
+        <form action="/download_email" method="POST">
+            <input type="hidden" name="email_content" value="{{ email }}">
+            <button type="submit">Download Email as HTML</button>
+        </form>
 </div>
-
-<script src="script.js"></script>
 </body>
 </html>
