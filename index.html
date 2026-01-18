@@ -1,13 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Cold Mail Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<div class="toggle">
+  <label>
+    <input type="checkbox" id="darkToggle">
+    🌙 Dark Mode
+  </label>
+</div>
+
 <div class="container">
-  <h1>Cold Mail Generator</h1>
+  <h1>📧 Cold Mail Generator</h1>
 
   <input id="name" placeholder="Your Name">
   <input id="company" placeholder="Company Name">
@@ -21,9 +30,16 @@
     <option value="networking">Networking</option>
   </select>
 
-  <button onclick="generateEmail()">Generate Email</button>
+  <button onclick="generateEmail()">🚀 Generate Email</button>
+
+  <div class="actions">
+    <button onclick="copyEmail()">📋 Copy</button>
+    <button onclick="downloadPDF()">📄 Download</button>
+  </div>
 
   <pre id="output"></pre>
+
+  <div class="mail-icon">✉️</div>
 </div>
 
 <script src="script.js"></script>
