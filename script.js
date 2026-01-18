@@ -1,4 +1,4 @@
-const API_URL = "https://YOUR-RENDER-URL.onrender.com/generate";
+const API_URL = "https://api.render.com/deploy/srv-d5m94fu3jp1c739ufhfg?key=kPOKwH-y5Ls";
 
 const output = document.getElementById("output");
 
@@ -45,3 +45,4 @@ function downloadPDF() {
 document.getElementById("darkToggle").addEventListener("change", () => {
   document.body.classList.toggle("dark");
 });
+
