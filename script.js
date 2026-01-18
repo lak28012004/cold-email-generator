@@ -1,4 +1,16 @@
-const API_URL = "https://cold-email-generator-z0n5.onrender.com/";
+const API_URL = "https://YOUR-RENDER-URL.onrender.com/generate";
+
+const output = document.getElementById("output");
+
+function typeText(text) {
+  output.textContent = "";
+  let i = 0;
+  const interval = setInterval(() => {
+    output.textContent += text[i];
+    i++;
+    if (i >= text.length) clearInterval(interval);
+  }, 15);
+}
 
 function generateEmail() {
   fetch(API_URL, {
@@ -13,11 +25,23 @@ function generateEmail() {
     })
   })
   .then(res => res.json())
-  .then(data => {
-    document.getElementById("output").textContent = data.email;
-  })
-  .catch(() => {
-    document.getElementById("output").textContent =
-      "Error connecting to backend";
-  });
+  .then(data => typeText(data.email))
+  .catch(() => output.textContent = "❌ Backend connection failed");
 }
+
+function copyEmail() {
+  navigator.clipboard.writeText(output.textContent);
+  alert("Email copied!");
+}
+
+function downloadPDF() {
+  const blob = new Blob([output.textContent], { type: "text/plain" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "cold_email.txt";
+  a.click();
+}
+
+document.getElementById("darkToggle").addEventListener("change", () => {
+  document.body.classList.toggle("dark");
+});
