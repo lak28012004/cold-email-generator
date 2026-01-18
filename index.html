@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cold Mail Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Cold Mail Generator</h1>
+
+  <input id="name" placeholder="Your Name">
+  <input id="company" placeholder="Company Name">
+  <input id="role" placeholder="Job Role">
+  <textarea id="skills" placeholder="Your Skills"></textarea>
+
+  <select id="template">
+    <option value="student">Student</option>
+    <option value="fresher">Fresher</option>
+    <option value="experienced">Experienced</option>
+    <option value="networking">Networking</option>
+  </select>
+
+  <button onclick="generateEmail()">Generate Email</button>
+
+  <pre id="output"></pre>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
