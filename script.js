@@ -1,7 +1,6 @@
-const API_URL = "https://cold-email-generator-9vnu.onrender.com";
+const API_URL = "https://cold-email-generator-9vnu.onrender.com/";
 
 const output = document.getElementById("output");
-
 function typeText(text) {
   output.textContent = "";
   let i = 0;
@@ -45,5 +44,6 @@ function downloadPDF() {
 document.getElementById("darkToggle").addEventListener("change", () => {
   document.body.classList.toggle("dark");
 });
+
 
 
