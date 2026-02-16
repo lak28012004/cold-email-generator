@@ -52,5 +52,15 @@ The system follows a modular and scalable architecture.
 <p align="center">
   <img src="images/architecture.png" width="85%">
 </p>
-
 ### Architecture Flow
+User Input (Web Form)
+↓
+Flask Backend (app.py)
+↓
+Template Processing (Jinja2)
+↓
+NLP / AI Logic
+↓
+Structured Email Output
+↓
+Rendered on Web Interface
