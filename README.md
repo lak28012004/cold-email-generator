@@ -82,3 +82,29 @@ Users simply input their credentials and context — the system generates a comp
 ---
 
 ## 🏗️ System Architecture
+User Input (Web Form)
+↓
+Flask Backend (app.py)
+↓
+Template Processing (Jinja2)
+↓
+NLP / Rule-Based / AI Logic
+↓
+Structured Email Output
+↓
+Rendered to User Interface
+
+
+## 📂 Project Structure
+Cold-Email-Generator/
+│
+├── app.py
+├── requirements.txt
+│
+├── templates/
+│ └── index.html
+│
+├── static/
+│ └── style.css
+│
+└── README.md
