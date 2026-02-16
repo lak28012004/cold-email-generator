@@ -30,7 +30,7 @@ This system ensures structured formatting, value-driven messaging, and professio
 ## 🏠 Home Interface
 
 <p align="center">
-  <img src="images/home-interface.png" width="85%">
+  <img src="Screenshot (14).png">
 </p>
 
 ---
