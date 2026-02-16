@@ -38,7 +38,7 @@ This system ensures structured formatting, value-driven messaging, and professio
 ## ✉️ Generated Email Output
 
 <p align="center">
-  <img src="images/generated-output.png" width="85%">
+  <img src="Screenshot (15).png">
 </p>
 
 ---
