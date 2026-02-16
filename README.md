@@ -30,9 +30,7 @@ This system ensures structured formatting, value-driven messaging, and professio
 ## 🏠 Home Interface
 
 <p align="center">
-  <img src="<img width="1335" height="977" alt="Screenshot (14)" src="https://github.com/user-attachments/assets/d075fba1-4405-4907-972e-ba824b461df9" />
- />
-" width="80%">
+  <img src="images/home-interface.png" width="85%">
 </p>
 
 ---
@@ -40,9 +38,7 @@ This system ensures structured formatting, value-driven messaging, and professio
 ## ✉️ Generated Email Output
 
 <p align="center">
-  <img src="<img width="1066" height="1022" alt="Screenshot (15)" src="https://github.com/user-attachments/assets/3431b6c6-a1c1-47c0-adab-4648d3c50948" />
-" />
-">
+  <img src="images/generated-output.png" width="85%">
 </p>
 
 ---
