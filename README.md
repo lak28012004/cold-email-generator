@@ -62,7 +62,6 @@ NLP / AI Logic
 Structured Email Output
 ↓
 Rendered on Web Interface
-
 ---
 
 # 🏆 Why This Project Stands Out
